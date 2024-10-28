@@ -28,7 +28,6 @@ class Calculadora:
   def ingresar_dato (self):
     self.datos = [int(input('Ingresar datos')) for i in range(self.num)] #Los datos seran ingresados y guardados, el bucle me pone a correr los datos hasta que sea n
 class Op_basicas (Calculadora):
-  '''realiza bbbbb'''
   def __init__(self):
     Calculadora.__init__(self,2) #Le digo que al llamar la clase padre solo puede usar dos valore
   def suma(self):
@@ -52,4 +51,5 @@ class Raiz(Calculadora):
 
 ejemplo = Op_basicas()
 print(isinstance(ejemplo,Op_basicas)) #Confirmar que operacion se esta relaizando
+
 

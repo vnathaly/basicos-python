@@ -25,6 +25,6 @@ class Smartphone(Telefono, Camara, Reproduccion):
     #Entonces dentro de smartphone no haremos metodos para el como tal sino que nos ayudara a unir las otras clases
     print('Telefono apagado')
 
-#Ahora simplemente estaremos llamando a la clase padre y de ahi podmeos usar calcuier metodos de sus clases hijos, optimizando el codigo y su ejecucion
+#Ahora simplemente estaremos llamando a la clase padre y de ahi podemos usar cualquier metodos de sus clases hijos, optimizando el codigo y su ejecucion
 movil = Smartphone()
 print(movil.llamar())
