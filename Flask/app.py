@@ -1,15 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 #'''El parametro de name, es para decirle a la app que esta siendo importada y que sepa exactamente donde buscar los archivos html y dem[as]'''
 app = Flask(__name__)
 
-#Esto del @ son decoradores
 @app.route("/")
-def index():
-  name = "Nath"
-  num = 2
-  return render_template("index.html", name = name, num = num)
+def home():
+  return render_template("index.html")
 
-@app.route("/contacto")
+@app.route("/contacto",  methods=["POST"])
 def contacto():
-  return render_template("contacto.html")
-
+  name = request.form.get("name")
+  return render_template("contacto.html", name = name)

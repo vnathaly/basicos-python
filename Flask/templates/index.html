@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 {% block body %}
-  <!-- jinja -->
-   {% if num == 2 %}
-  <h1>Hi word {{name}}</h1>
-  {% else %}
-  <h2>Welcome to Html</h2>
-  {%endif%}
+
+<h1>Welcome</h1>
+<form action="{{ url_for('contacto') }}" method="post">
+  <input type="text" name="name" placeholder="Enter your name">
+  <button>Send</button>
+</form>
+
 {% endblock %}
