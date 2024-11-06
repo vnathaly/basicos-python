@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+#Este codigo es de practica mas que nada, para saber como funcionan las cosas del ORM a traves de la terminal
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////Users/Nath/Desktop/python/orm/blog.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
