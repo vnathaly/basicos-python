@@ -7,6 +7,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////Users/Nath/Desktop/python/bl
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
+app.app_context().push()
+
 class Post(db.Model):
 	__tablename__ = "posts"
 	id = db.Column(db.Integer, primary_key=True)
